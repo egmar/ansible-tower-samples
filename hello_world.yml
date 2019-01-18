@@ -4,4 +4,8 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+  tasks:
+    - name: Fact
+      debug:
+        msg: {{ ansible_facts['nodename'] }}
 
