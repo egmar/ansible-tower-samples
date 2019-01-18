@@ -1,7 +1,5 @@
-- name: echo-printer
+- name: describe-hosts
   hosts: all
-  vars:
-    favcolor: blue
   tasks:
-  - name: this is just a placeholder
-    command: echo {{ favcolor }}
+   - name: describe hosts
+     debug: msg="Computer {{ ansible_hostname }} is running {{ ansible_os_family }} or equivalent"
