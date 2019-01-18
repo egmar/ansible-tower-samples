@@ -2,4 +2,4 @@
   hosts: all
   tasks:
    - name: describe hosts
-     debug: msg="Computer {{ ansible_hostname }} with ip address {{ ansible_all_ipv4_addresses[0] }} is running {{ ansible_os_family }} or equivalent"
+     debug: msg="Computer {{ ansible_hostname }} with bios version {{ ansible_bios_version }} is running {{ ansible_os_family }} or equivalent"
