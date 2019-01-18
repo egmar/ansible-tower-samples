@@ -1,11 +1,7 @@
-- name: Hello World Sample
+- name: echo-printer
   hosts: all
+  vars:
+    favcolor: blue
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
-  tasks:
-    - name: Fact
-      debug:
-        msg: {{ ansible_facts['nodename'] }}
-
+  - name: this is just a placeholder
+    command: echo {{ favcolor }}
